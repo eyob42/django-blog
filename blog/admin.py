@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.contrib import admin
 from blog.models import Category , Comment, Post
 
@@ -8,7 +9,6 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class PostAdmin(admin.ModelAdmin):
     pass
-
 
 class CommentAdmin(admin.ModelAdmin):
     pass
