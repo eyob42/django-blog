@@ -1,7 +1,4 @@
-from turtle import title
-from unicodedata import category
 from django.db import models
-from django.forms import CharField
 
 class Category(models.Model):
     name = models.CharField(max_length=30)
