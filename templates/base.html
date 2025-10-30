@@ -1,17 +1,26 @@
-
-
+<!-- templates/base.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Blog</title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<h1>My Personal Blog</h1>
-<a href="{% url "blog_index" %}">Home</a>
-<hr>
-{% block page_title %}{% endblock page_title %}
-{% block page_content %}{% endblock page_content %}
+<body class="bg-gray-50">
+    <!-- Simple Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="{% url 'blog_index' %}" class="text-xl font-bold text-gray-800">My Blog</a>
+                <a href="{% url 'blog_index' %}" class="text-gray-600 hover:text-blue-600">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        {% block page_content %}{% endblock page_content %}
+    </main>
 </body>
 </html>
